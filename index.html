@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generator haseł</title>
+</head>
+<body>
+    <header>
+        <a href="#"><img src="ZP monogram.png" alt="tutaj będzie logo ZP"></a>
+    </header>
+    <section>
+        <div class="title">Wygeneruj hasła</div>
+        <div class="name-surname-form">
+            <!-- 
+                wprowadzenie imienia i nazwiska nowego pracownika 
+
+                wprowadzenie imienia i nazwiska działa poprawnie:
+                    a. generuje się już mail
+            --> 
+            <form action="">
+                <input type="text" id="name" placeholder="Wprowadź imię" class="input-form"> <br>
+                <input type="text" id="surname" placeholder="Wprowadź nazwisko" class="input-form"> <br>
+                <!-- radiobuttony/checkboxy do zaznaczenia dla jakich platform chcemy wygenerować hasła -->
+                <input type="radio" name="" id="mail" class="radio-btn" onclick="check()"> 
+                <label for="mail">Mail</label>
+                <input type="radio" name="" id="BL" class="radio-btn" onclick="check()"> 
+                <label for="BL">Baselinker</label>
+                <input type="radio" name="" id="PS" class="radio-btn" onclick="check()"> 
+                <label for="PS">PrestaShop</label>
+                <br>
+                <input type="button" id="mailGenerator" onclick="generate()" value="Generuj" class="generate-btn">
+            </form>
+        </div>
+        <div class="generate-mail">
+            <!-- wygenrowany mail w postaci imie.nazwisko@zielony-parapet.pl - ZROBIONE! -->
+            
+        </div>
+        <div class="password-table-div">
+            <!-- 
+                Wygenerowane hasła: 
+
+                tutaj będzie lista list-style-type: none; wypisująca hasła dla poszczególnych platform, - ZROBIONE!
+                obok platform i haseł będą przyciski "Skopiuj!", żeby wkleić je do formularza dodania użytkownika
+                <ul> 
+                <li>
+                    Skrzynka pocztowa/Slack: <span id="generatedPasswordMail" class="generated-pwd"></span>
+                </li>
+                <li>
+                    Baselinker: <span id="generatedPasswordBaselinker" class="generated-pwd"></span>
+                </li>
+                <li>
+                    PrestaShop: <span id="generatedPasswordPresta" class="generated-pwd"></span>
+                </li>
+            </ul>
+            -->
+        <table class="password-table">
+            <thead>
+                <tr>
+                    <td colspan="2" class="centered-td"><span id="generatedMail" class="generated-mail"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="centered-td">Wygenerowane hasła</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Skrzynka pocztowa</td>
+                    <td><span id="generatedPasswordMail" class="generated-pwd"></span></td>
+                </tr>
+                <tr>
+                    <td>Baselinker</td>
+                    <td><span id="generatedPasswordBaselinker" class="generated-pwd"></span></td>
+                </tr>
+                <tr>
+                    <td>PrestaShop</td>
+                    <td><span id="generatedPasswordPresta" class="generated-pwd"></span></td>
+                </tr>
+            </tbody>
+        </table>
+            
+        </div>
+    </section>
+    <footer>
+        <!-- mała stopka z linkiem naszego sklepiu po lewej stronie i po prawej stronie Copyrights Marek Rzepka -->
+        <div class="shop-link"><a href="https://zielony-parapet.pl">zielony-parapet.pl</a></div>
+        <div class="copyrights">Stworzone przez &copy Marek Rzepka </div>
+    </footer>
+    <script src="mail.js"></script>
+</body>
+</html>
