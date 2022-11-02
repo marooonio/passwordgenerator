@@ -20,10 +20,10 @@
                 wprowadzenie imienia i nazwiska działa poprawnie:
                     a. generuje się już mail
             --> 
-            <form action="">
+            <form action="" method="" id="form">
                 <input type="text" id="name" placeholder="Wprowadź imię" class="input-form"> <br>
                 <input type="text" id="surname" placeholder="Wprowadź nazwisko" class="input-form"> <br>
-                <!-- radiobuttony/checkboxy do zaznaczenia dla jakich platform chcemy wygenerować hasła -->
+                    <!-- radiobuttony/checkboxy do zaznaczenia dla jakich platform chcemy wygenerować hasła -->
                 <input type="radio" name="" id="mail" class="radio-btn" onclick="check()"> 
                 <label for="mail">Mail</label>
                 <input type="radio" name="" id="BL" class="radio-btn" onclick="check()"> 
@@ -32,55 +32,35 @@
                 <label for="PS">PrestaShop</label>
                 <br>
                 <input type="button" id="mailGenerator" onclick="generate()" value="Generuj" class="generate-btn">
+                <button id="formClear" onclick="clear()" class="generate-btn">Wyzeruj</button>
             </form>
         </div>
-        <div class="generate-mail">
-            <!-- wygenrowany mail w postaci imie.nazwisko@zielony-parapet.pl - ZROBIONE! -->
-            
-        </div>
-        <div class="password-table-div">
-            <!-- 
-                Wygenerowane hasła: 
 
-                tutaj będzie lista list-style-type: none; wypisująca hasła dla poszczególnych platform, - ZROBIONE!
-                obok platform i haseł będą przyciski "Skopiuj!", żeby wkleić je do formularza dodania użytkownika
-                <ul> 
-                <li>
-                    Skrzynka pocztowa/Slack: <span id="generatedPasswordMail" class="generated-pwd"></span>
-                </li>
-                <li>
-                    Baselinker: <span id="generatedPasswordBaselinker" class="generated-pwd"></span>
-                </li>
-                <li>
-                    PrestaShop: <span id="generatedPasswordPresta" class="generated-pwd"></span>
-                </li>
-            </ul>
-            -->
-        <table class="password-table">
-            <thead>
-                <tr>
-                    <td colspan="2" class="centered-td"><span id="generatedMail" class="generated-mail"></span></td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="centered-td">Wygenerowane hasła</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Skrzynka pocztowa</td>
-                    <td><span id="generatedPasswordMail" class="generated-pwd"></span></td>
-                </tr>
-                <tr>
-                    <td>Baselinker</td>
-                    <td><span id="generatedPasswordBaselinker" class="generated-pwd"></span></td>
-                </tr>
-                <tr>
-                    <td>PrestaShop</td>
-                    <td><span id="generatedPasswordPresta" class="generated-pwd"></span></td>
-                </tr>
-            </tbody>
-        </table>
-            
+        <div class="password-table-div">
+            <table class="password-table">
+                <thead>
+                    <tr>
+                        <td colspan="2" class="centered-td"><span id="generatedMail" class="generated-mail"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="centered-td">Wygenerowane hasła</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Skrzynka pocztowa</td>
+                        <td><span id="generatedPasswordMail" class="generated-pwd"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Baselinker</td>
+                        <td><span id="generatedPasswordBaselinker" class="generated-pwd"></span></td>
+                    </tr>
+                    <tr>
+                        <td>PrestaShop</td>
+                        <td><span id="generatedPasswordPresta" class="generated-pwd"></span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     <footer>
@@ -89,5 +69,6 @@
         <div class="copyrights">Stworzone przez &copy Marek Rzepka </div>
     </footer>
     <script src="mail.js"></script>
+    <script src="form-clear.js"></script>
 </body>
 </html>
